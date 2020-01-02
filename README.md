@@ -15,12 +15,12 @@ Add it in your root build.gradle at the end of repositories:</p>
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
-		}
+		}v
 	}
 </code></pre>
 <p>Step 2. Add the dependency</p>
 <pre><code>dependencies {
-	        implementation 'com.github.Iaovy:Base-Frame:Tag'
+	         implementation 'com.github.Iaovy:Base-Frame:v1.0.0'
 	}
 </code></pre>
 <p>Android快速开发框架<br>
