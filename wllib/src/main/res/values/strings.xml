@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">lib</string>
+
+    <string name="str_status_no_network">网络连接异常\n请检查网络设置后重试</string>
+    <string name="str_status_error_data">服务器连接异常\n请稍后再试</string>
+    <string name="str_status_empty_data">暂无该类型数据\n请稍后再试</string>
+    <string name="hint_list_empty_data">暂无该类型数据\n下拉刷新试试</string>
+    <string name="retry_load_more">加载失败, 点击重试</string>
+
+    <string name="click_retry">点击重试</string>
+    <string name="confirm_dialog_text_1">确认</string>
+    <string name="service_exception">服务器异常, 请稍后再试</string>
+    <string name="need_login_hint">请登录后重试</string>
+    <string name="click_login">点击登录</string>
+    <string name="handle_video">正在处理视频</string>
+
+</resources>

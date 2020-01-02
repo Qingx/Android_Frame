@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/font_56">
+
+    <LinearLayout
+        android:id="@+id/ll_adapter_loading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/font_56"
+        android:gravity="center">
+
+        <!--<com.github.ybq.android.spinkit.SpinKitView-->
+        <!--android:layout_width="@dimen/padding_32"-->
+        <!--android:layout_height="@dimen/padding_32"-->
+        <!--android:layout_gravity="center"-->
+        <!--app:SpinKit_Color="@color/main_color_blue"-->
+        <!--app:SpinKit_Style="ThreeBounce" />-->
+
+        <ProgressBar
+            android:layout_width="@dimen/font_24"
+            android:layout_height="@dimen/font_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_adapter_failure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/font_56"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_4"
+            android:text="@string/retry_load_more"
+            android:textColor="@color/md_red_500"
+            android:textSize="@dimen/font_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_adapter_no_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/font_56"
+        android:gravity="center">
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="0.5dp"
+            android:background="#D7D7D7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_8"
+            android:layout_marginRight="@dimen/padding_8"
+            android:text="没有更多数据了"
+            android:textColor="#D7D7D7"
+            android:textSize="@dimen/font_12" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="0.5dp"
+            android:background="#D7D7D7" />
+
+    </LinearLayout>
+
+</FrameLayout>

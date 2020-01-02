@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:buttonCir="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/font_48"
+            android:layout_height="@dimen/font_48"
+            android:layout_marginTop="@dimen/padding_24"
+            android:padding="@dimen/padding_14"
+            android:src="@drawable/ic_lib_back_white"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_change"
+            android:layout_width="@dimen/font_48"
+            android:layout_height="@dimen/font_48"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding_24"
+            android:padding="@dimen/padding_14"
+            android:src="@drawable/ic_lib_camera_change" />
+
+        <SurfaceView
+            android:id="@+id/sv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:text="点按拍照，按住摄像"
+            android:textColor="#ffeeeeee"
+            android:textSize="@dimen/font_12" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginRight="@dimen/padding_24"
+                android:background="@drawable/draw_circle_white"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_lib_clear"
+                buttonCir:layout_constraintBottom_toBottomOf="parent"
+                buttonCir:layout_constraintLeft_toLeftOf="parent"
+                buttonCir:layout_constraintRight_toRightOf="@+id/gui_record"
+                buttonCir:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="@dimen/font_24"
+                android:background="@drawable/draw_circle_white"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_lib_done"
+                android:visibility="gone"
+                buttonCir:layout_constraintBottom_toBottomOf="parent"
+                buttonCir:layout_constraintLeft_toLeftOf="@+id/gui_record"
+                buttonCir:layout_constraintRight_toRightOf="parent"
+                buttonCir:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_finish"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/padding_24"
+                android:padding="@dimen/padding_12"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_lib_close"
+                buttonCir:layout_constraintBottom_toBottomOf="parent"
+                buttonCir:layout_constraintLeft_toLeftOf="parent"
+                buttonCir:layout_constraintRight_toRightOf="@+id/gui_record"
+                buttonCir:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_select"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="@dimen/padding_24"
+                android:padding="@dimen/padding_12"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_lib_album"
+                android:visibility="gone"
+                buttonCir:layout_constraintBottom_toBottomOf="parent"
+                buttonCir:layout_constraintLeft_toLeftOf="@+id/gui_record"
+                buttonCir:layout_constraintRight_toRightOf="parent"
+                buttonCir:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="90dp"
+                android:padding="5dp"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gui_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                buttonCir:layout_constraintGuide_percent="0.5" />
+
+            <cn.wl.android.lib.view.CircleButtonView
+                android:id="@+id/cbv_record"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                buttonCir:layout_constraintLeft_toLeftOf="@+id/gui_record"
+                buttonCir:layout_constraintRight_toRightOf="@+id/gui_record"
+                buttonCir:maxTime="30"
+                buttonCir:minTime="2"
+                buttonCir:progressColor="#008800" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
