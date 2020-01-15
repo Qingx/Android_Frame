@@ -15,7 +15,7 @@ Add it in your root build.gradle at the end of repositories:</p>
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
-		}v
+		}
 	}
 </code></pre>
 <p>Step 2. Add the dependency</p>
