@@ -13,6 +13,5 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initViewCreated(Bundle savedInstanceState) {
-
     }
 }

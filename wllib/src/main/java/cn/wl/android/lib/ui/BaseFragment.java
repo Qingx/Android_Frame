@@ -110,9 +110,9 @@ public abstract class BaseFragment extends BaseCommonFragment {
     public void dispatchDataMiss(ErrorBean error) {
         if (!onInterceptDataMiss(error)) {
             Throwable miss = error.getError();
-
             if (miss instanceof EmptyMiss) {
                 showEmptyData(error);
+
             } else if (miss instanceof NetMiss) {
                 showNetMiss(error);
             } else {
